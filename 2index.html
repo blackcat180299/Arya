@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Arya ❤️</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #d6336c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      position: relative;
+      height: 120px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #yes:hover {
+      background: #e6395c;
+      transform: scale(1.05);
+    }
+
+    #no {
+      background: #ccc;
+      color: #666;
+      position: absolute;
+      left: 200px;
+      top: 0;
+    }
+
+    img {
+      margin-top: 30px;
+      width: 220px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Arya ❤️</h1>
+    <p>There’s something I really want to ask you…</p>
+    <p><strong>Do you love me?</strong></p>
+
+    <div class="buttons">
+      <button id="yes" onclick="showLove()">Yes 💖</button>
+      <button id="no">No</button>
+    </div>
+
+    <img id="heart" src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif" alt="Love">
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", moveButton);
+    noBtn.addEventListener("click", moveButton);
+
+    function moveButton() {
+      const x = Math.random() * 250;
+      const y = Math.random() * 80;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    function showLove() {
+      document.getElementById("heart").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
+
+    
